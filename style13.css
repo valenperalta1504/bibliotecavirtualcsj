@@ -1,0 +1,1582 @@
+
+              .user-list-container {
+                max-width: 397px;
+                margin-top: 10px;
+                width: 397px;
+                margin-left: -17px;
+                max-height: 400px; /* Establece la altura máxima para la lista */
+                overflow-y: auto; 
+                display: flex;
+                flex-direction: column; /* Asegúrate de que la dirección del flexbox sea column */
+              }
+              
+              .user-link {
+                margin-bottom: -2px;
+                background-color: #007bff;
+                width: 360px;
+              }
+              
+              .user-link a {
+                display: inline-block;
+                padding: 12px 8px;
+                background-color: #f0f0f0;
+                color: #292929;
+                text-decoration: none;
+                width: 360px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+              }
+
+              .user-link a:hover {
+                background-color: #3597ff; 
+                color:white;/* Cambia el color de fondo al pasar el cursor sobre el enlace */
+              }
+
+              
+.user-link img {
+  width: 40px; /* Ajustar el tamaño de la imagen según sea necesario */
+  height: 40px; /* Ajustar el tamaño de la imagen según sea necesario */
+  border-radius: 50%; /* Hacer que la imagen sea redonda si lo deseas */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.user-link .user-name {
+  font-size: 16px; /* Ajustar el tamaño de fuente según sea necesario */
+  /* Puedes ajustar otros estilos para el nombre del usuario aquí */
+}
+              
+              /* Opcional: agregar espacio entre los usuarios */
+              .user-link + .user-link {
+                margin-top: 5px;
+              }
+              /* Adjust the bubble positions for users */
+              
+              .user-link:nth-child(even) a {
+                float: left;
+              }
+              
+              .user-link:nth-child(odd) a {
+                float: left;
+              }
+
+              .container11 {
+                width: 362px;
+                height: 500px;
+                margin: 50px auto;
+                background-color: #cccccc;
+                padding: 20px;
+                padding-top: 0px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px #bebebe;
+                }
+
+                p.titulo6 {
+                  text-align: center;
+                  background-color: #f0f0f0;
+                  width: 398px;
+                  height: 80px;
+                  padding-top: 20px;
+                  margin-left: -18px;
+                  color: #760808;
+                  font-family: 'Calibri', sans-serif;
+                  font-size: 25px; /* Adjust the desired font size */
+                }
+
+                
+                .search-container2 {
+                  display: flex; /* Para establecer el diseño en línea con flexbox */
+                  align-items: center; /* Para alinear verticalmente los elementos en el centro */
+                }
+                
+                /* Estilo para el contenedor de los gráficos */
+                .chart-container {
+                  width: 530px; /* Ancho deseado */
+                  height: 330px; /* Alto deseado */
+                  margin: 20px; /* Margen para separar los gráficos */
+                }
+                
+                /* Cambiar la fuente para los elementos que muestran las estrellas */
+                .fa-star, .fa-star-half-alt, .fa-star-empty {
+                  font-family: "Arial", sans-serif; /* Cambia "Arial" por la fuente que desees utilizar */
+                }
+                
+                /* Estilo para los gráficos */
+                canvas {
+                  max-width: 100%;
+                  max-height: 100%;
+                }
+                
+                    
+                .container3:nth-child(3),
+                .container3:nth-child(4) {
+                  grid-column: 1 / 3;
+                }
+                .fila-container {
+                    display: flex;
+                    align-items: center;
+                  }
+
+                  #search-input {
+                    margin-right: 5px;
+                }
+                
+                .search-container {
+                    display: flex;
+                    align-items: center;
+                  }
+                  
+                  .search-label {
+                    margin-right: 10px;
+                  }
+                
+                  .container6 {
+                    display: flex;
+                    width: 100%; /* El contenedor ocupa toda la página */
+                  }
+                  
+                  .columna {
+                    flex: 1; /* Cada columna se expande para ocupar el espacio disponible equitativamente */
+                    padding: 10px; /* Agrega un poco de espacio entre las columnas */
+                    box-sizing: border-box; /* Incluye el padding dentro del ancho de la columna */
+                
+                  }
+                
+                  .columna-60 {
+                    flex-basis: 65%; /* Set the width of the column to 60% */
+                  }
+                  
+                  .columna-40 {
+                    flex-basis: 35%; /* Set the width of the column to 40% */
+                  }
+                
+                  .portada {
+                    flex-basis: 35%; /* Set the width of the column to 40% */
+                  }
+                
+                  .info-libro {
+                    flex-basis: 65%; /* Set the width of the column to 60% */
+                  }
+                  /* Estilo para los elementos dentro de la clase .mili */
+                .mili {
+                  display: flex;
+                  justify-content: space-between;
+                }
+                
+                /* Estilo para aplicar bordes redondeados a los elementos */
+                .mili > li {
+                  border-radius: 10px; /* Puedes ajustar el valor según el tamaño de los bordes redondeados que desees */
+                  /* Agrega cualquier otro estilo que desees para los elementos */
+                }
+                
+                  .pequeño.texto-eliminar {
+                    font-size: 15px;
+                  }
+                  
+                  /* Estilo para el contenedor principal */
+                  .filter-container {
+                    display: flex;
+                    align-items: center;
+                  }
+                  
+                  /* Estilo para los elementos select */
+                  .filter-select {
+                    border: 1px solid #ccc;
+                    background-color: #f7f5f5;
+                    padding: 8px;
+                    margin-right: 10px;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    color: #333;
+                    width: 110px; /* Modifica el ancho a tu preferencia */
+                    height: 32px; /* Modifica el alto a tu preferencia */
+                  }
+                
+                  .filter-select2 {
+                    border: 1px solid #ccc;
+                    background-color: #f7f5f5;
+                    padding: 8px;
+                    margin-right: 10px;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    color: #333;
+                    width: 150px; /* Modifica el ancho a tu preferencia */
+                    height: 32px; /* Modifica el alto a tu preferencia */
+                  }
+                
+                
+                  
+                  /* Estilo para el botón */
+                  .filter-button {
+                    background-color: #333;
+                  
+                    cursor: pointer;
+                  }
+                
+                  /* Estilos para el botón de selección de archivos */
+                  .custom-file-input {
+                    display: none;
+                  }
+                  
+                  /* Estilo para el contenedor personalizado (mismo estilo que antes) */
+                  .custom-file-label {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: #f2f2f2;
+                    color: #333;
+                    border: 2px solid #ccc;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s, border-color 0.3s;
+                  }
+                  
+                  /* Cambia el estilo cuando se pasa el mouse sobre el contenedor (mismo estilo que antes) */
+                  .custom-file-label:hover {
+                    background-color: #e0e0e0;
+                    border-color: #aaa;
+                  }
+                  
+                  /* Cambia el estilo cuando se hace clic en el contenedor (mismo estilo que antes) */
+                  .custom-file-input:focus + .custom-file-label {
+                    outline: 2px solid #999;
+                    outline-offset: -2px;
+                  }
+                  
+                  /* Ajustar los estilos de los select para algunos navegadores específicos (opcional) */
+                  .filter-select::-ms-expand {
+                    display: none;
+                  }
+                  
+                  .filter-select option {
+                    color: #333;
+                  }
+                  
+                  button#btn-editar {
+                    padding: 5px;
+                    background-color: transparent;/* Azul */
+                    color: rgb(0, 0, 0);
+                    border: none;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    margin: 5px;
+                  }
+                  
+                  p#btn-editar {
+                    padding: 5px;
+                    background-color: transparent;/* Azul */
+                    color: rgb(255, 255, 255);
+                    border: none;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    margin: 5px;
+                  }
+                  
+                  /* Estilos para la imagen dentro del botón */
+                  #btn-editar img {
+                    /* Establecer un tamaño máximo para la imagen */
+                    max-width: 100%;
+                    max-height: 100%;
+                  
+                    /* Agregar una transición para un efecto suave */
+                    transition: transform 0.2s ease;
+                  }
+                  
+                  /* Estilos para la imagen dentro del botón cuando el cursor está sobre ella (hover) */
+                  #btn-editar:hover img {
+                    /* Aplicar la transformación de escala */
+                    transform: scale(1.1);
+                  }
+                  
+                  .menu3 .dropdown-content li:last-child {
+                    border-bottom: none; /* Eliminar el borde inferior en la última opción */
+                  }
+                  
+                  .menu3 .dropdown-content a {
+                    color: #b10505; /* Color de texto bordo */
+                    padding: 10px;
+                    font-size: 15px;
+                    display: block; /* Para que ocupe todo el ancho de la caja */
+                  }
+                  
+                  .menu3 .dropdown:hover .dropdown-content {
+                    display: block; /* Mostrar las opciones al pasar el cursor sobre el elemento padre */
+                  }
+                  
+                  
+                  .menu3 .dropdown-content {
+                    display: none; /* Ocultar las opciones por defecto */
+                    background-color: #ffffff; /* Fondo blanco */
+                    border: 1px solid #c9c9c9;
+                    border-radius: 5px;
+                    border-top: none; /* Eliminar el borde superior para que la caja sea completa */
+                  }
+                  
+                  .menu3 .dropdown-content li {
+                    border-bottom: 1px solid #c9c9c9;
+                  }
+                  
+                  .menu3 .dropdown-content li:last-child {
+                    border-bottom: none; /* Eliminar el borde inferior en la última opción */
+                  }
+                  
+                  .menu3 .dropdown-content a {
+                    color: #b10505;
+                    padding: 10px;
+                  }
+                  
+                  .menu3 .dropdown:hover .dropdown-content {
+                    display: block; /* Mostrar las opciones al pasar el cursor sobre el elemento padre */
+                  }
+                  
+                  .dropdown-content a:hover {
+                     text-decoration: underline; /* Añadir subrayado al hacer hover */
+                  }
+                  
+                  .container-menu {
+                    display: flex;
+                    align-items: center;
+                  }
+                  
+                  .container-menu img {
+                    /* Estilos para la imagen */
+                    margin-right: 10px; /* Espacio entre la imagen y el menú */
+                  }
+                  
+                  .container-menu nav {
+                    /* Estilos para el menú */
+                    margin-left: auto; /* Empuja el menú hacia la derecha */
+                  }
+                  
+                  
+                  /* Resto del código CSS anterior */
+                  
+                  /* Nuevas clases para la página de confirmación */
+                  
+                  .confirmation-text {
+                  font-size: 20px;
+                  margin-bottom: 20px;
+                  
+                  }
+                  
+                  .confirmation-button {
+                  background-color: #960a0a;
+                  color: #fff;
+                  border: none;
+                  padding: 10px 20px;
+                  font-size: 16px;
+                  border-radius: 4px;
+                  text-decoration: none;
+                  text-align: center;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  }
+                  
+                  .confirmation-button:hover {
+                  background-color: #760808;
+                  }
+                  
+                  .container5 {
+                      max-width: 100%;
+                      margin: 50px;
+                      padding: 20px;
+                      background-color: #f7f5f5;
+                      border-radius: 10px;
+                      box-shadow: 0px 0px 10px #ccc;
+                    }
+                  
+                    .container8 {
+                      max-width: 100%;
+                      margin: 2px;
+                      padding: 20px;
+                      background-color: #f7f5f5;
+                      border-radius: 10px;
+                      box-shadow: 0px 0px 10px #ccc;
+                    }
+                  
+                    #portada-container2 img {
+                      /* Estilos normales para la imagen aquí */
+                      width: 150px; /* Ejemplo, ajusta según tus necesidades */
+                      height: 230px; /* Para mantener la proporción de la imagen */
+                      /* Otros estilos si los tienes */
+                  
+                      /* Estilos para el efecto "hover" */
+                      transition: transform 0.3s ease; /* Transición suave para el efecto */
+                  }
+                  
+                  #portada-container2 img:hover {
+                      cursor: pointer;
+                      transform: scale(1.1); /* Aumenta el tamaño al 110% en "hover" */
+                      /* Otros estilos adicionales si los deseas */
+                  }
+                    
+                    .pagination {
+                      display: flex;
+                      justify-content: center;
+                      margin-top: 20px;
+                    }
+                    
+                    .pagination a {
+                      display: inline-block;
+                      padding: 8px 15px;
+                      font-size: 16px;
+                      color:#760808;
+                      text-decoration: none;
+                    }
+                    
+                    .pagination a.active {
+                      background-color: #760808;
+                      color: #fff;
+                    }
+                    
+                    .boton-centro {
+                      display: flex;
+                      justify-content: center;
+                      margin-top: 10px;
+                    }
+                    
+                    .book-gallery {
+                      display: grid;
+                      grid-template-columns: repeat(4, 1fr);
+                      grid-gap: 20px;
+                      margin: 20px auto;
+                      max-width: 1200px;
+                    }
+                    
+                    .container9 {
+                      border: 1px solid #ccc;
+                      padding: 10px;
+                      text-align: center;
+                    }
+                    
+                  
+                    .boton-centro button {
+                      padding: 8px 15px;
+                      font-size: 16px;
+                      background-color: #760808;
+                      color: #fff;
+                      border: none;
+                      cursor: pointer;
+                    }
+                    
+                    .boton-centro p {
+                      margin: 0;
+                      padding: 0;
+                    }
+                  
+                  /* Estilo para ocultar los libros que están fuera de la paginación */
+                  .book-gallery .container9.hide {
+                    display: none;
+                  }
+                  
+                  
+                    .libros-grid {
+                      display: grid;
+                      grid-template-columns: repeat(3, 1fr); /* Define 3 columnas con tamaño igual */
+                      grid-gap: 20px; /* Define el espacio entre los elementos */
+                    }
+                    
+                    .libros-grid li {
+                      list-style: none;
+                    }
+                    
+                    .botones-container {
+                      display: flex;
+                    }
+                    
+                    .boton {
+                      margin-right: 10px; /* Espacio entre los botones */
+                    }
+                    
+                    .titulo {
+                      text-align: center;
+                    }
+                    
+                    .autor {
+                      text-align: center;
+                      font-size: 16px;
+                    }
+                    
+                    .boton-centro {
+                      text-align: center;
+                    }
+                    
+                    p.titulo {
+                      text-align: center;
+                      margin: 0;
+                      color: #760808;
+                      font-family: 'Calibri', sans-serif;
+                      font-size: 25px; /* Adjust the desired font size */
+                    }
+                  
+                    p.titulo2 {
+                      text-align: left;
+                      margin: 0;
+                      color: #760808;
+                      font-family: 'Calibri', sans-serif;
+                      font-size: 22px; /* Adjust the desired font size */
+                    }
+                  
+                    p.titulo3 {
+                      text-align: center;
+                      margin: 0;
+                      color: #760808;
+                      font-family: 'Calibri', sans-serif;
+                      font-size: 20px; /* Adjust the desired font size */
+                    }
+                  
+                    p.titulo4 {
+                      text-align: left;
+                      margin: 0;
+                      color: #760808;
+                      font-family: 'Calibri', sans-serif;
+                      font-size: 25px; /* Adjust the desired font size */
+                    }
+                
+                    p.titulo5 {
+                      text-align: left;
+                      margin: 0;
+                      color: #760808;
+                      font-family: 'Calibri', sans-serif;
+                      font-size: 16px; /* Adjust the desired font size */
+                    }
+                    
+                    .grid-container {
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      gap: 20px;
+                    }
+                    
+                    .container3 {
+                      margin-bottom: 20px;
+                    }
+                
+                    .button-container {
+                      display: flex;
+                      gap: 10px; /* Espacio entre los botones */
+                      
+                    }
+                    
+                    .action-button {
+                      display: inline-block;
+                    }
+                  
+                
+                    #btn-editar {
+                      padding: 5px;
+                      background-color: transparent;/* Azul */
+                      color: #333;
+                      border: none;
+                      border-radius: 5px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      cursor: pointer;
+                      margin: 5px;
+                    }
+                
+                    
+                    #btn-editar p{
+                      color: #333;
+                    }
+                
+                    #btn-editar:hover {
+                      /* Estilos para el botón cuando el cursor está sobre él (hover) */
+                      color: rgb(0, 0, 0); /* Puedes mantener el color de texto en hover o cambiarlo si deseas */
+                    }
+                
+                    button.custom-button:hover {
+                      /* ... Tus estilos para el hover ... */
+                      background-color: transparent; /* Nuevo color de fondo en hover */
+                      color: white; /* Puedes mantener el color de texto en hover o cambiarlo si deseas */
+                      border: 1px solid white; /* Un borde sutil al pasar el cursor sobre el botón */
+                    }
+                    
+                    /* Estilos para la imagen dentro del botón */
+                    .custom-button img {
+                      max-width: 100%;
+                      max-height: 100%;
+                    }
+                    
+                
+                    .search-button {
+                      background-color: rgb(136, 13, 13);
+                      color: #ffffff;
+                      border: none;
+                      padding: 10px 20px;
+                      font-size: 16px;
+                      border-radius: 4px; /* Ajusta este valor según el grado de redondez que prefieras */
+                      text-decoration: none;
+                    }
+                
+                    button.search-button {
+                      font-size: 15px;
+                    }
+                
+                    .modal {
+                      display: none;
+                    position: fixed;
+                    z-index: 1;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    
+                    .modal-content {
+                      background-color: #f7f5f5;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0px 0px 10px #ccc;
+                    max-height: 600px; /* Altura máxima de la ventana emergente */
+                    overflow-y: auto;
+                    }
+
+                    
+       /* Estilo para cada elemento de la lista de libros */
+       main li {
+        flex-basis: calc(50.33% - 50px);
+        display: block;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f7f5f5;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        }
+    
+       
+        
+
+    /* Estilo para la imagen de portada del libro */
+    li img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        }
+
+        textarea {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          background-color: #f7f5f5;
+          display: block;
+          font-size: 18px;
+          padding: 10px;
+          border: none;
+          border-bottom: 2px solid rgb(136, 13, 13);
+          width: 80%;
+        
+          /* Estilo para el texto dentro del textarea */
+          font-family: 'Times New Roman', Times, serif, sans-serif;
+          font-size: 16px;
+          color: #333; /* Puedes cambiar este valor al color que desees */
+        }
+
+        p.infolibro{
+          font-size: 16px;
+
+      }
+            button[type="submit"] {
+              background-color: rgb(136, 13, 13);
+              color: white;
+              border: none;
+              padding: 10px;
+              cursor: pointer;
+              margin-left: 10px;
+              }
+            
+            h4{
+            font-size: 16px;
+            font-weight: normal;
+            }
+            
+            
+          /* Estilo para checkboxs */
+               select {
+          font-family: "Times New Roman", serif;
+              font-size: 16px;
+              border: none;
+  border-bottom: 2px solid rgb(136, 13, 13);
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 80%;
+  background-color: transparent;
+  }
+            html, body {
+                margin: 0;
+                padding: 0;
+                background-image: url("fondo2.jpg");
+                background-size: 100% auto; /* o background-size: auto 100%; */
+                background-repeat: repeat-y;
+              }
+            
+              #portada-container {
+                display: flex;
+                height: 230px; /* Ajusta la altura deseada para el contenedor */
+                width: 100%;
+                overflow: hidden; /* Añade esta línea para ocultar cualquier contenido que sobrepase el contenedor */
+            }
+
+                           
+              
+            #portada-container img {
+              width: 150px;
+              height: 230px;
+              object-fit: cover; /* Utiliza 'cover' para recortar y llenar el contenedor */
+          }
+
+          #portada-container3 {
+              display: block;
+              height: 400px;
+              width: 100%;
+              overflow: hidden;
+            }
+           
+
+            #portada-container3 img {
+              width: 190px;
+              height: 300px;
+              object-fit: cover;
+              border: 4px solid white; /* Ajusta el tamaño del borde según tus preferencias */
+            }
+            /* Estilo para el pie de página de las ventanas de confirmación2*/
+        .footerpro {
+            margin-top: 150px;
+            }
+            
+            /* Estilo para el pie de página de las ventanas de confirmación*/
+            .footerpro2 {
+            margin-top: 20px;
+            }
+            .spacer {
+            padding-bottom: 500px;
+            }
+            
+            .menu2 {
+            
+            text-align: right;
+            background-color: #b10505;
+            color: #fff;
+            padding: 10px;
+            font-family: 'Calibri', sans-serif;
+            }
+            
+            .menu2 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: right;
+            }
+            
+            .menu2 li {
+            margin: 0 10px;
+            }
+            
+            .menu2 a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            }
+            
+            .menu2 a:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(136, 13, 13);
+            padding: 5px;
+            }
+
+                      
+              
+  input[type="date"] {
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid rgb(136, 13, 13);
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+    background-color: transparent;
+    }
+    
+    .menu3 {
+    background-color: #b10505;
+    color: #fff;
+    padding: 10px;
+    font-family: 'Calibri', sans-serif;
+    }
+    
+    .menu3 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    }
+    
+    .menu3 li {
+    padding-left: 0px;
+    position: relative; /* Para que los elementos hijos se posicionen correctamente */
+    }
+    
+    .logo {
+    width:220px; 
+    height:auto;
+    
+    }
+    .menu3 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    }
+    
+    .menu3 a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(136, 13, 13);
+    padding: 3px;
+    padding-top: 10px;
+    padding-block-end: 10px;
+    }
+    
+    
+    .menu3 .dropdown-content {
+      display: none; /* Ocultar las opciones por defecto */
+      background-color: #fff; /* Fondo blanco */
+      border: 1px solid #b10505; /* Borde rojo */
+      position: absolute;
+      top: 30px; /* Posicionar debajo del elemento padre */
+      z-index: 1; /* Para que se muestre por encima de otros elementos */
+    }
+
+    
+    .menu3 .dropdown-content li {
+      border-bottom: 1px solid #b10505; /* Borde rojo en cada opción */
+    }
+    
+      /* Estilo para el navegador */
+      nav {
+        background-color: #960a0a;
+        color: #fff;
+        padding: 20px;
+        }
+        
+        nav a.active {
+        background-color: #ffffff;
+        color: #007bff;
+        padding: 20px;
+        }
+        
+        p.a{
+        color:#fff;
+        }
+        nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: left;
+        }
+        
+        nav li {
+        margin: 0 5px;
+        }
+        
+        nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        }
+        
+        /* Estilo para el navegador al pasar el mouse */
+        nav a:hover {
+        background-color: rgb(255, 255, 255);
+        color: rgb(136, 13, 13);
+        padding: 20px;
+        }
+        
+        /* Estilo para el texto */
+        p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        }
+        
+        /* Estilo para el botón de reservar */
+        
+        button {
+        background-color: rgb(136, 13, 13);
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 1px;
+        text-decoration: none;
+        }
+        
+        button a {
+        color: #ffffff;
+        text-decoration: none;
+        }
+        
+      
+          
+        .botón {
+          background-color: rgb(136, 13, 13);
+          color: #ffffff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          border-radius: 4px; /* Ajusta este valor según el grado de redondez que prefieras */
+          text-decoration: none;
+      }
+        
+        .boton2 {
+        text-align: left;
+        }
+        
+        .botón a {
+        color: #ffffff;
+        text-decoration: none;
+        }
+        
+        .botón:hover {
+          background-color: #760808;
+        }
+        
+        .margen{
+        padding-top: 30px;
+        }
+
+           /* Estilos para el pie de página */
+      footer {
+        background-color: #b10505;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        margin:0px
+        }
+        
+        .error-message {
+          color: red !important;
+          }
+          
+          
+          .container3 {
+          width: 500px;
+          margin: 50px auto;
+          background-color: #f7f5f5;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px #ccc;
+          
+          }
+          
+          .error-text {
+          color:#b10505;
+          }
+          .container4 {
+          
+          width: 500px;
+          margin: 50px auto;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px #ccc;
+          
+          }
+
+          .lindo-input2 {
+            background-color: #f7f5f5;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid rgb(136, 13, 13);
+            width: 80%;
+        }
+
+        .lindo-input3 {
+          background-color: #f7f5f5;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          font-size: 18px;
+          padding: 10px;
+          border: none;
+          border-bottom: 2px solid rgb(136, 13, 13);
+
+      }
+
+        .lindo-input {
+      
+          background-color: #f7f5f5;
+          font-size: 18px;
+          padding: 10px;
+          border: none;
+          border-bottom: 2px solid rgb(136, 13, 13);
+          width: 60%;
+      }
+
+
+          .search-container {
+            display: flex;
+            align-items: center;
+        }
+        
+       /* Estilo para el contenido principal */
+       main {
+        margin: 20px;
+        }
+        
+  /* Estilo para la sección de libros */
+  section {
+    margin-bottom: 50px;
+    }
+    
+  /* Estilo para el título de la sección de libros */
+  h2 {
+    text-decoration: none;
+    font-size: 24px;
+    margin-top: 0;
+    font-family: 'Calibri', sans-serif;
+    }
+    
+  
+  /* Estilo para la lista de libros */
+  main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    }
+    .descripcion {
+      grid-column: span 3; /* Esta regla hará que la celda de descripción ocupe 3 columnas */
+    }
+    
+    td {
+      font-size: 16px;
+    }
+    
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px;
+    }
+    .btn {
+      margin: 5px;
+      padding: 8px 16px;
+      border: none;
+      background-color: rgba(150, 10, 10, 0.8); /* Color semi-transparente */
+      color: #fff;
+      cursor: pointer;
+      font-size: 24px;
+      position: absolute; /* Posicionamiento absoluto para los botones */
+      z-index: 2; /* Asegurar que los botones estén sobre la imagen */
+      transform: translate(-50%, -50%); /* Alinear los botones en el centro */
+    }
+    
+    
+    .btn:hover {
+      background-color: rgba(150, 10, 10, 1); /* Cambiar el color al pasar el cursor */
+      box-shadow: inset 0 0 0 1px  #8b8b8b;
+    
+    }
+  
+  .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    }
+    
+    .form-row  label {
+    margin-right: 10px;
+    }
+    
+    .modal h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    }
+    
+    .modal p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    }
+    
+    .modal button {
+    background-color: #960a0a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    }
+    
+    .modal button:hover {
+    background-color: #760808;
+    }
+    
+    /* Mantiene el menú arriba del encabezado */
+    .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    
+    
+  /* Mantiene la imagen arriba del main */
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+    }
+    
+    /* Estilo para el encabezado */
+    header {
+    background-color: #b10505;
+    color: white;
+    padding: 20px;
+    }
+    
+    /* Estilo para el título principal */
+    h1 {
+    font-size: 36px;
+    font-family: 'Palatino Linotype', sans-serif;
+    margin: 0;
+    font-weight: 300;
+    
+    }
+    
+    .container7 {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .container7 img {
+      width: 1000px;
+      height: auto;
+      margin: 0px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    
+    button[name="reserva"]:disabled {
+      background-color: #af9c9c;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px; /* Ajusta este valor según el grado de redondez que prefieras */
+      text-decoration: none;
+      color: #644343;
+      cursor: not-allowed;
+      box-shadow: none; /* Eliminar el efecto de sombra al estar deshabilitado */
+    }
+
+    button[name="id"]:disabled {
+      background-color: #af9c9c;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px; /* Ajusta este valor según el grado de redondez que prefieras */
+      text-decoration: none;
+      color: #644343;
+      cursor: not-allowed;
+      box-shadow: none; /* Eliminar el efecto de sombra al estar deshabilitado */
+    }
+
+    button[name="reseña"]:disabled {
+        background-color: #af9c9c;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 4px; /* Ajusta este valor según el grado de redondez que prefieras */
+        text-decoration: none;
+        color: #644343;
+        cursor: not-allowed;
+        box-shadow: none; /* Eliminar el efecto de sombra al estar deshabilitado */
+      }
+      
+      
+      .disbled{
+        background-color: #af9c9c;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 4px; /* Ajusta este valor según el grado de redondez que prefieras */
+        text-decoration: none;
+        color: #644343;
+        cursor: not-allowed;
+        box-shadow: none; /* Eliminar el efecto de sombra al estar deshabilitado */
+      }
+    
+    button.search-button:hover {
+      background-color: #760808;
+    }
+    
+
+    .boton button:hover {
+      background-color: #760808;
+      }
+  
+    
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    tr:hover {
+      background-color: #f2f2f2;
+    }
+    
+    .estrellas {
+        font-size: 24px;
+        cursor: pointer;
+      }
+    
+      .estrella {
+        color: #686767;
+      }
+
+      .foro {
+        max-width: 1200px;
+        margin: 0 auto;
+        transition: background-color 0.3s; /* Agregamos una transición para que el cambio de color sea suave */
+    }
+    
+    .foro:hover {
+        background-color: #f2f2f2; /* Cambiamos el color de fondo cuando el cursor esté sobre el elemento */
+    }
+
+    .publicacion {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+      transition: background-color 0.3s, color 0.3s; /* Agregamos una transición suave para ambos cambios */
+  }
+  
+  .publicacion:hover {
+      background-color: #eeeded; /* Cambia el color de fondo al hacer hover */
+      color: #333; /* Cambia el color del texto al hacer hover */
+  }
+
+    .publicacion p {
+        margin: 5px 0;
+    }
+
+    th {
+      background-color: #f7f5f5;
+      font-size: 16px;
+      font-weight: bold;
+      color: #760808;
+      justify-content: center;
+    }
+    
+    .invisible {
+    color: #f7f5f5;
+    }
+    
+    .containerdeboton form {
+      display: block;
+      font-size: 10px;
+    }
+
+    .user-list-container {
+      max-width: 397px;
+      margin-top: 10px;
+      width: 397px;
+      margin-left: -17px;
+      max-height: 400px; /* Establece la altura máxima para la lista */
+      overflow-y: auto; 
+      display: flex;
+      flex-direction: column; /* Asegúrate de que la dirección del flexbox sea column */
+    }
+    
+    .user-link {
+      margin-bottom: -2px;
+      background-color: #007bff;
+      width: 360px;
+    }
+    
+    .user-link a {
+      display: inline-block;
+      padding: 12px 8px;
+      background-color: #f0f0f0;
+      color: #292929;
+      text-decoration: none;
+      width: 360px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    .user-link a:hover {
+      background-color: #3597ff; 
+      color:white;/* Cambia el color de fondo al pasar el cursor sobre el enlace */
+    }
+
+    
+.user-link img {
+width: 40px; /* Ajustar el tamaño de la imagen según sea necesario */
+height: 40px; /* Ajustar el tamaño de la imagen según sea necesario */
+border-radius: 50%; /* Hacer que la imagen sea redonda si lo deseas */
+margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.user-link .user-name {
+font-size: 16px; /* Ajustar el tamaño de fuente según sea necesario */
+/* Puedes ajustar otros estilos para el nombre del usuario aquí */
+}
+    
+    /* Opcional: agregar espacio entre los usuarios */
+    .user-link + .user-link {
+      margin-top: 5px;
+    }
+    /* Adjust the bubble positions for users */
+    
+    .user-link:nth-child(even) a {
+      float: left;
+    }
+    
+    .user-link:nth-child(odd) a {
+      float: left;
+    }
+
+    .container11 {
+      width: 362px;
+      margin: 50px auto;
+      background-color: #dfdfdf;
+      padding: 20px;
+      padding-top: 0px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px #d4d4d4;
+      }
+
+      .container12 {
+        width: 362px;
+        height: 590px;
+        margin: 50px auto;
+        background-color: #dfdfdf;
+        padding: 20px;
+        padding-top: 0px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #d4d4d4;
+        }
+
+      .nuevo {
+        margin: 10px;
+        color:#960a0a;
+      }
+
+      p.titulo6 {
+        text-align: center;
+        background-color: #f0f0f0;
+        width: 398px;
+        height: 80px;
+        padding-top: 20px;
+        margin-left: -18px;
+        color: #760808;
+        font-family: 'Calibri', sans-serif;
+        font-size: 25px; /* Adjust the desired font size */
+      }
+
+      .chat-container {
+        background-color:  #dfdfdf;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      .mensaje {
+        margin-bottom: 10px;
+      }
+      .mensaje strong {
+        color: #0066cc;
+      }
+      .textarea {
+        width: 100%;
+        height: 100px;
+        resize: vertical;
+        margin-bottom: 10px;
+      }
+      .boton-enviar {
+        background-color: #0066cc;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      .boton-enviar:hover {
+        background-color: #0052a3;
+      }
+      .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      .user-profile {
+        display: flex;
+        align-items: center;
+margin-left: -20px;
+        background-color: #f0f0f0;
+        width: 400px;
+        height: 60px;
+
+    }
+
+    /* Estilos de la imagen del perfil */
+    .user-profile img {
+
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-left: 10px;
+    }
+
+    /* Estilos del nombre del usuario */
+    .user-profile .titulo2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    .message-container {
+      max-height: 250px; /* Altura máxima para que tenga scroll */
+      height: 250px;
+      overflow-y: auto; /* Habilitar scroll si el contenido supera la altura máxima */
+      border: 1px solid  #dfdfdf;
+      padding: 10px;
+      margin-bottom: 10px;
+  }
+
+  /* Estilos del textarea */
+  .textarea {
+      width: 99%;
+      height: 130px;
+      resize: vertical; /* Permitir ajustar la altura verticalmente */
+    padding-left: 10px;
+  }
+
+  /* Estilos del botón */
+  .boton-enviar {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+    }
+
+    .mensaje {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 5px 0;
+      max-width: 250px;
+      word-wrap: break-word;
+  }
+  
+  /* Estilos para mensajes del usuario actual (a la derecha) */
+  .mensaje-propio {
+      background-color: #e6f7ff;
+      text-align: left;
+      align-self: flex-end; /* Alinea el contenedor del mensaje a la derecha */
+      margin-left: auto; /* Mueve el mensaje propio a la derecha */
+  
+  }
+  
+  /* Estilos para mensajes de otros remitentes (a la izquierda) */
+  .mensaje-otro {
+      background-color: #f2f2f2;
+      text-align: left;
+      margin-right: auto; /* Mueve el mensaje de otros remitentes a la izquierda */
+   
+  }
+
+  .mensaje-otro .nombre-remitente {
+    
+    font-weight: bold;
+    font-size: 14px;
+}
+li {
+  align-items: center;
+}
+
+.notificacion {
+  background-color: #2f94ff;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 3px 6px;
+  margin-left: 5px;
+}
+.fa-bell {
+  font-size: 20px; /* Ajusta el tamaño según tus necesidades */
+  margin-right: 5px; /* Agrega un pequeño margen entre el icono y el texto */
+}
+
+.notificacion2 {
+  background-color: #2f94ff;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 3px 6px;
+  margin-left: 0px;
+}
+
+.notificacion3 {
+  background-color: #2fff4b;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 3px 6px;
+  margin-left: 0px;
+}
+
+.notificacion4 {
+  background-color: #ff0000;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 3px 6px;
+  margin-left: 5px;
+}
+
+.notificacion5 {
+  background-color: #ff0000;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 3px 6px;
+  margin-left: 0px;
+}
