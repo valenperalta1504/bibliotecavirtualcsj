@@ -161,7 +161,7 @@ mysqli_query($conn, $query_actualizar);
 
 sleep(1);
 exit();
-}
+} 
 } else {
     header("Location: home.php");
 }
