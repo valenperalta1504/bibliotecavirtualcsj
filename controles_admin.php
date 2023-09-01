@@ -248,6 +248,9 @@ require_once 'conexion_bd_libros.php';
         else  {
             echo '<li><a href="mi_cuenta.php">Mi cuenta</a></li>';
         }
+          if (isset($_SESSION['es_admin2.0'])) {
+            echo  '<li><a href="subir_libros.php">Controles del Admin</a></li>';
+        }
             if ($resultado=="visible"){
             if ($totalNuevosMensajes > 0) {
                 echo '<li><a href="chat.php"><span class="notificacion">' . $totalNuevosMensajes . '</span> Chat virtual</a></li>';
@@ -303,6 +306,9 @@ require_once 'conexion_bd_libros.php';
             } else {
             echo '<li><a href="mi_cuenta.php">Mi cuenta</a></li>';
         }
+          if (isset($_SESSION['es_admin2.0'])) {
+            echo  '<li><a href="subir_libros.php">Controles del Admin</a></li>';
+        }
             if ($resultado=="visible"){
                 if ($totalNuevosMensajes > 0) {
                     echo '<li><a href="chat.php"><span class="notificacion">' . $totalNuevosMensajes . '</span> Chat virtual</a></li>';
@@ -356,6 +362,9 @@ require_once 'conexion_bd_libros.php';
                 echo '<li><a href="mi_cuenta.php"><span class="notificacion4">' . $totalPrestamosVencidosUsuario . '</span> Mi cuenta</a></li>';
             } else {
             echo '<li><a href="mi_cuenta.php" class="active">Mi cuenta</a></li>';
+        }
+          if (isset($_SESSION['es_admin2.0'])) {
+            echo  '<li><a href="subir_libros.php">Controles del Admin</a></li>';
         }
             if ($resultado=="visible"){
                 if ($totalNuevosMensajes > 0) {
@@ -436,6 +445,9 @@ function mostrar_menu_admin($es_admin)
         } else {
 
             echo '<li><a href="mi_cuenta.php" >Mi cuenta</a></li>';
+              if (isset($_SESSION['es_admin2.0'])) {
+            echo  '<li><a href="subir_libros.php" class="active">Controles del Admin</a></li>';
+        }
             if ($totalNuevosMensajes > 0) {
                 echo '<li><a href="chat.php"><span class="notificacion">' . $totalNuevosMensajes . '</span> Chat virtual</a></li>';
             } else {
@@ -467,25 +479,26 @@ function mostrar_menu_admin2($es_admin)
                 <li><a href="subir_archivocsv.php">CSV</a></li>
                 </ul>
                 </li>';
-                
-                if ($totalNuevasReservas > 0) {
-                echo '<li><a href="modificar_reservaciones.php"><span class="notificacion">' . $totalNuevasReservas . '</span> MODIFICAR RESERVACIONES</a></li>';
-            }
-            else {
-                echo '<li><a href="modificar_reservaciones.php">MODIFICAR RESERVACIONES</a></li>';
-            }
-            
-            if ($totalPrestamosVencidos > 0) {
-                echo '<li><a href="modificar_prestamos.php"><span class="notificacion4">' . $totalPrestamosVencidos . '</span> MODIFICAR PRESTAMOS</a></li>';
-            }
-            else {
-                echo '<li><a href="modificar_prestamos.php">MODIFICAR PRESTAMOS</a></li>';
-            }
-            echo'
-                <li><a href="modificar_libros.php">MODIFICAR LIBROS</a></li>
-                <li><a href="modificar_registros.php">MODIFICAR REGISTROS</a></li>
-                <li><a href="historial_prestamos.php">HISTORIAL DE PRESTAMOS</a></li>
-            </ul>';
+               if ($es_admin) {
+                    if ($totalNuevasReservas > 0) {
+                        echo '<li><a href="modificar_reservaciones.php"><span class="notificacion">' . $totalNuevasReservas . '</span> MODIFICAR RESERVACIONES</a></li>';
+                    }
+                    else {
+                        echo '<li><a href="modificar_reservaciones.php">MODIFICAR RESERVACIONES</a></li>';
+                    }
+                    
+                    if ($totalPrestamosVencidos > 0) {
+                        echo '<li><a href="modificar_prestamos.php"><span class="notificacion4">' . $totalPrestamosVencidos . '</span> MODIFICAR PRESTAMOS</a></li>';
+                    }
+                    else {
+                        echo '<li><a href="modificar_prestamos.php">MODIFICAR PRESTAMOS</a></li>';
+                    }
+                    echo'
+                        <li><a href="modificar_libros.php">MODIFICAR LIBROS</a></li>
+                        <li><a href="modificar_registros.php">MODIFICAR REGISTROS</a></li>
+                        <li><a href="historial_prestamos.php">HISTORIAL DE PRESTAMOS</a></li>
+                    </ul>';
+                }
         
         }
 
@@ -536,6 +549,9 @@ function mostrar_menu_chat($es_admin)
                 echo '<li><a href="mi_cuenta.php"><span class="notificacion4">' . $totalPrestamosVencidosUsuario . '</span> Mi cuenta</a></li>';
             } else {
             echo '<li><a href="mi_cuenta.php">Mi cuenta</a></li>';
+        }
+          if (isset($_SESSION['es_admin2.0'])) {
+            echo  '<li><a href="subir_libros.php">Controles del Admin</a></li>';
         }
             if ($totalNuevosMensajes > 0) {
                 echo '<li><a href="chat.php" class="active"><span class="notificacion">' . $totalNuevosMensajes . '</span> Chat virtual</a></li>';

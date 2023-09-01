@@ -4,7 +4,7 @@ define('ACCESO_PERMITIDO', true);
 // Verificar la sesión del usuario
 require_once 'verificar_sesion.php';
 // verificar admin
-require_once 'verificar_admin.php';
+require_once 'verificar_admin2.0.php';
 // verificar si existe un msj de error
 require_once 'mensaje_de_error.php';
 // verificar si existe un msj de error

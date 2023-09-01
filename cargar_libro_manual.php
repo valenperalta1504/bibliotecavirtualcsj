@@ -4,7 +4,7 @@ define('ACCESO_PERMITIDO', true);
 // Verificar la sesión del usuario
 require_once 'verificar_sesion.php';
 // verificar admin
-require_once 'verificar_admin.php';
+require_once 'verificar_admin2.0.php';
 // verificar si existe un mensaje de error
 require_once 'mensaje_de_error.php';
 // verificar si hay ventana emergente
@@ -87,11 +87,43 @@ require_once 'conexion_bd_libros.php';
                     <label for="descripción">Descripción:</label>
                     <textarea style="resize: none;" id="descripción" name="descripción" rows="5" cols="50" maxlength="1200"></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="Categorías">Categorías:</label>
-                    <h1><h1>
-                    <input class="lindo-input2" type="text" id="Categorías" name="Categorías" maxlength="30">
-                </div>
+                 <div class="form-group">
+                <h4>Categorías:</h4>
+                <select id="Categorías" name="Categorías">
+                <option value="" disabled selected></option>
+                    <option value="Clásicos">Clásicos</option>
+                    <option value="Terror, Misterio y Suspenso">Terror, Misterio y Suspenso</option>
+                    <option value="Ficción Niños">Ficción Niños</option>
+                    <option value="Historia, Naturaleza y Ciencia">Historia, Naturaleza y Ciencia</option>
+                    <option value="Infantiles">Infantiles</option>
+                    <option value="Elige tu propia aventura">Elige tu propia aventura</option>
+                    <option value="Ficción Juvenil">Ficción Juvenil</option>
+                    <option value="Religiosos">Religiosos</option>
+                    <option value="Filosofía">Filosofía</option>
+                    <option value="Ciudadanía y Participación">Ciudadanía y Participación</option>
+                    <option value="ESI">ESI</option>
+                    <option value="Sociología">Sociología</option>
+                    <option value="Ficción Niños">Ficción Niños</option>
+                    <option value="Antropología">Antropología</option>
+                    <option value="Derecho">Derecho</option>
+                    <option value="Economía">Economía</option>
+                    <option value="Administración">Administración</option>
+                    <option value="Geografía">Geografía</option>
+                    <option value="Manual">Manual</option>
+                    <option value="Historia">Historia</option>
+                    <option value="Ciencias Sociales">Ciencias Sociales</option>
+                    <option value="Ciencias Naturales">Ciencias Naturales</option>
+                    <option value="Lengua y Literatura">Lengua y Literatura</option>
+                    <option value="Matemática">Matemática</option>
+                    <option value="Física y Química">Física y Química</option>
+                    <option value="Tecnología">Tecnología</option>
+                    <option value="Ambiental">Ambiental</option>
+                    <option value="Medicina">Medicina</option>
+                    <option value="Biología">Biología</option>
+                    <option value="Ciudadanía y Participación">Docentes</option>
+
+                </select>
+            </div>
                 <div class="form-group">
                     <label for="Número_de_ejemplares">Número de ejemplares:</label>
                     <input class="lindo-input2" type="number" id="Número_de_ejemplares" name="Número_de_ejemplares" oninput="javascript: if (this.value.length > 2) this.value = this.value.slice(0, 2);">

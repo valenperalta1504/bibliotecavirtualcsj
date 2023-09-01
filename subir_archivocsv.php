@@ -4,7 +4,7 @@ define('ACCESO_PERMITIDO', true);
 // Verificar la sesión del usuario
 require_once 'verificar_sesion.php';
 // verificar admin
-require_once 'verificar_admin.php';
+require_once 'verificar_admin2.0.php';
 // verificar si existe un msj de error
 require_once 'mensaje_de_error.php';
 // verificar si existe un msj de error
@@ -49,21 +49,10 @@ require_once 'controles_admin.php';
 		<div class="container-menu">
         <img src="https://colegiodesanjose.edu.ar/img/logo/logo.png" alt="Logo del Colegio de San José" class="logo">
         		<nav class="menu3">
-                <ul>
-                    <li class="dropdown">
-                    <a href="#">CARGAR LIBROS</a>
-                        <ul class="dropdown-content">
-                        <li><a href="subir_libros.php">CON ISBN</a></li>
-                        <li><a href="cargar_libro_manual.php">MANUAL</a></li>
-                        <li><a href="subir_archivocsv.php">CSV</a></li>
-                        </ul>
-                        </li>
-						<li><a href="modificar_reservaciones.php">MODIFICAR RESERVACIONES</a></li>
-						<li><a href="modificar_prestamos.php">MODIFICAR PRESTAMOS</a></li>
-						<li><a href="modificar_libros.php">MODIFICAR LIBROS</a></li>
-						<li><a href="modificar_registros.php">MODIFICAR REGISTROS</a></li>
-						<li><a href="historial_prestamos.php">HISTORIAL DE PRESTAMOS</a></li>
-					</ul>
+                <?php
+    		// Llamada a la función pasando el valor de $es_admin
+    		mostrar_menu_admin2($_SESSION['es_admin']);
+    		?>
                 </nav>
 			</div>
 		</header>

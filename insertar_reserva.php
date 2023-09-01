@@ -22,7 +22,7 @@ require_once 'controles_admin.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<link rel="icon" type="image/png" href="/logo6.png"/>
     <title>Biblioteca Virtual</title>
-    <link rel="stylesheet" href="style18.css">
+    <link rel="stylesheet" href="style22.css">
 </head>
 <body>
     <div class="container">
@@ -56,49 +56,59 @@ require_once 'controles_admin.php';
                     echo $error;}
             ?>
     <form method="post" action="nueva_reserva.php">
-    <div class="form-group">
-                <label for="Nombre_alumno">Nombre completo:</label>
-                <input class="lindo-input2" type="text" id="Nombre_alumno" name="Nombre_alumno" maxlength="30" >
-            </div>
-            <div class="form-group">
-                <h4>Nivel:</h4>
-                <select id="Nivel" name="Nivel">
-                <option value="" disabled selected></option>
-                    <option value="Secundario">Secundario</option>
-                    <option value="Primario">Primario</option>
-                    <option value="Inicial">Inicial</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <h4>Curso:</h4>
-                <select id="Curso" name="Curso">
-                <option value="" disabled selected></option>
-                    <option value="1ro">1ro</option>
-                    <option value="2do">2do</option>
-                    <option value="3ro">3ro</option>
-                    <option value="4to">4to</option>
-                    <option value="5to">5to</option>
-                    <option value="6to">6to</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <h4>División:</h4>
-                <select id="División" name="División">
-                <option value="" disabled selected></option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="Dni">Dni:</label>
-                <h1><h1>
-                <input class="lindo-input2" type="number" id="Dni" name="Dni" oninput="javascript: if (this.value.length > 8) this.value = this.value.slice(0, 8);">
-            </div>
-            <div class="form-group">
-                <label for="ISBN">ISBN/Código interno:</label>
-                <h1><h1>
-                <input class="lindo-input2" type="number" id="ISBN" name="ISBN" oninput="javascript: if (this.value.length > 13) this.value = this.value.slice(0, 13);">
-            </div>
+    <?php
+        // Obtener los datos de los usuarios (simulados aquí)
+        $usuarios = []; // Aquí almacenarás los datos obtenidos de la base de datos
+        // Ejemplo de cómo podrías obtener los datos de la base de datos
+        $query = "SELECT dni, nombre_completo, nivel, curso, division FROM registro";
+        $result = mysqli_query($conn, $query);
+        while ($row = mysqli_fetch_assoc($result)) {
+            $usuarios[] = $row;
+        }
+    ?>
+
+    <label for="Usuario">Seleccionar usuario:</label>
+    <input type="text" id="userSearchInput" class="lindo-input5" placeholder="Buscar usuario...">
+    <div class="user-list-container2" style="width: 500px;"> <!-- Ajusta el ancho aquí -->
+
+        <div class="user-list">
+            <?php foreach ($usuarios as $usuario) { ?>
+                <label class="user-item">
+                    <input type="radio" name="selectedUsers" value="<?php echo $usuario['dni']; ?>">
+                    <span class="user-info">
+                        <?php echo $usuario['nombre_completo'] . ' - ' . $usuario['curso'] . ' ' . $usuario['division'] . ' ' . $usuario['nivel']; ?>
+                    </span>
+                </label>
+            <?php } ?>
+        </div>
+    </div> 
+    <?php
+        // Obtener los datos de los usuarios (simulados aquí)
+        $libros = []; // Aquí almacenarás los datos obtenidos de la base de datos
+        // Ejemplo de cómo podrías obtener los datos de la base de datos
+        $query = "SELECT Título, ISBN FROM libros";
+        $result = mysqli_query($conn, $query);
+        while ($row = mysqli_fetch_assoc($result)) {
+            $libros[] = $row;
+        }
+    ?>
+    <br><br>
+<label for="Usuario">Seleccionar libro:</label>
+<input type="text" id="bookSearchInput" class="lindo-input5" placeholder="Buscar libro...">
+<div class="book-list-container" style="width: 500px;">
+    <div class="book-list">
+        <?php foreach ($libros as $libro) { ?>
+            <label class="book-item">
+                <input type="radio" name="isbn" value="<?php echo $libro['ISBN']; ?>">
+                <span class="book-info">
+                    <?php echo $libro['Título'] . ' - ' . $libro['ISBN']; ?>
+                </span>
+            </label>
+        <?php } ?>
+
+    </div>
+</div>
+<br><br>
         <div class="form-group">
             <label for="Fecha">Fecha:</label>
             <p><p>
@@ -117,4 +127,35 @@ require_once 'controles_admin.php';
     echo $ventana_emergente;
   }
   ?>
+    <script>
+    const userSearchInput = document.getElementById('userSearchInput');
+    const bookSearchInput = document.getElementById('bookSearchInput');
+    const userItems = document.querySelectorAll('.user-list-container2 .user-item');
+    const bookItems = document.querySelectorAll('.book-list-container .book-item');
+
+    userSearchInput.addEventListener('input', function () {
+        const searchTerm = userSearchInput.value.toLowerCase();
+        userItems.forEach(item => {
+            const userInfo = item.querySelector('.user-info').textContent.toLowerCase();
+            if (userInfo.includes(searchTerm)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+
+    bookSearchInput.addEventListener('input', function () {
+        const searchTerm = bookSearchInput.value.toLowerCase();
+        bookItems.forEach(item => {
+            const bookInfo = item.querySelector('.book-info').textContent.toLowerCase();
+            if (bookInfo.includes(searchTerm)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+</script>
 </body>
+

@@ -7,16 +7,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["insertar"]) && $_POST["insertar"] === "insertar") {
-$Nombre_alumno = $_POST["Nombre_alumno"];
-$Dni = $_POST["Dni"];
-$Nivel = $_POST["Nivel"];
-$Curso = $_POST["Curso"];
-$División = $_POST["División"];
-$ISBN = $_POST["ISBN"];
+    $Dni = $_POST["selectedUsers"];
+    $ISBN = $_POST["isbn"];
 $Fecha = $_POST["Fecha"];
 
 //Verificar campos vacíos
-if (empty($Nombre_alumno) || empty($Dni) || empty($Nivel) || empty($Curso) || empty($División) || empty($ISBN)|| empty($Fecha)) {
+if ( empty($Dni) || empty($ISBN)|| empty($Fecha)) {
     $error = '<p class="error-message">Debe completar todos los campos para efectuar la acción</p>';
     session_start();
     $_SESSION['error'] = $error;
@@ -24,6 +20,17 @@ if (empty($Nombre_alumno) || empty($Dni) || empty($Nivel) || empty($Curso) || em
     exit;
 }
 
+$sql = "SELECT dni, nombre_completo, nivel, curso, division FROM registro WHERE Dni = '$Dni'";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc(); // Obtener la primera fila de resultados
+    
+    // Guardar los valores en variables
+    $Nombre_alumno = $row['nombre_completo'];
+    $Nivel = $row['nivel'];
+    $Curso = $row['curso'];
+    $División = $row['division'];
+}
    
     $sql = "SELECT * FROM reservaciones WHERE ISBN = '$ISBN' AND Dni = '$Dni'";
 

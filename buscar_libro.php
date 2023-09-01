@@ -5,7 +5,7 @@ define('ACCESO_PERMITIDO', true);
 // Verificar la sesión del usuario
 require_once 'verificar_sesion.php';
 // verificar admin
-require_once 'verificar_admin.php';
+require_once 'verificar_admin2.0.php';
 // Conectar con la bd
 require_once 'conexion_bd_libros.php';
 //Condición para saber si se ejecuta como action del metodo post y no desde la url

@@ -16,6 +16,59 @@ require_once 'controles_admin.php';
 // Conexión con la base de datos
 require_once 'conexion_bd_libros.php';
 
+$host = "localhost";
+$user = "u922954738_root";
+$password = "MnS$$851";
+$database = "u922954738_biblioteca";
+
+$conn = new mysqli($host, $user, $password, $database);
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+}
+
+
+$sql = "SELECT `Nombre_alumno`,`Valoración`, `Reseña`, `ISBN`
+        FROM `reseñas`
+        ORDER BY id DESC
+        LIMIT 10";
+
+$result = $conn->query($sql);
+
+$reseñas = array();
+$libros = array();
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $reseñas[] = array(
+            "Nombre_alumno" => $row["Nombre_alumno"],
+            "Valoración" => $row["Valoración"],
+            "Reseña" => $row["Reseña"]
+        );
+
+        // Realizar una consulta separada para obtener el título del libro
+        $isbn = $row["ISBN"];
+        $titulo_sql = "SELECT `Título` FROM `libros` WHERE `ISBN` = '$isbn'";
+        $titulo_result = $conn->query($titulo_sql);
+
+        if ($titulo_result->num_rows > 0) {
+            $titulo_row = $titulo_result->fetch_assoc();
+            $libros[] = $titulo_row["Título"];
+        } else {
+            $libros[] = "Título no encontrado";
+        }
+    }
+}
+
+// Función para generar las estrellas según la valoración
+function generateStars($rating) {
+    $stars = '';
+    for ($i = 1; $i <= 5; $i++) {
+        $stars .= ($i <= $rating) ? '&#9733;' : '&#9734;';
+    }
+    return $stars;
+  }
 
 function obtenerLibrosMasPrestados($conn) {
     $ultimoMes = date('Y-m-d', strtotime('-1 month'));
@@ -135,42 +188,14 @@ $titulos_libros_mejor_valorados = obtenerTitulosLibros($conn, $isbn_libros_mejor
 
         </div>
         <li>
-  <p class="titulo">RESEÑAS RECIENTES:</p>
-  <br><br>
+
   <?php
-// Datos de conexión a la base de datos
 
-// Consulta SQL para obtener las últimas 10 reseñas con el título del libro
-$sql = "SELECT r.Nombre_alumno, r.Valoración, r.Reseña, l.Título AS Titulo_libro
-        FROM Reseñas r
-        JOIN Libros l ON r.ISBN = l.ISBN
-        ORDER BY r.id DESC
-        LIMIT 10";
 
-$result = $conn->query($sql);
-
-// Obtener títulos de libros asociados a las reseñas
-$libros = array();
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $libros[] = $row["Titulo_libro"];
-        $reseñas[] = $row;
-    }
-}
-
-$conn->close();
-
-// Función para generar las estrellas según la valoración
-function generateStars($rating) {
-    $stars = '';
-    for ($i = 1; $i <= 5; $i++) {
-        $stars .= ($i <= $rating) ? '&#9733;' : '&#9734;';
-    }
-    return $stars;
-  }
 
 ?>
-
+  <p class="titulo">RESEÑAS RECIENTES:</p>
+  <br><br>
 <!-- Estructura HTML para mostrar las reseñas con los títulos de libros -->
 <div class="foro">
     <?php if (empty($reseñas)) { ?>

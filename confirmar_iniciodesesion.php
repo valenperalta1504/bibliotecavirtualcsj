@@ -60,6 +60,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }else {
             $_SESSION['es_admin'] = false;
         }
+         if ($usuario === 'admin2.0') {
+            $_SESSION['es_admin2.0'] = true;
+        } else {
+            $_SESSION['es_admin2.0'] = false;
+        }
         // Si los datos coinciden ingresa a home.php
         header("Location: home.php");
         exit;

@@ -165,7 +165,7 @@ header("Location: subir_csv_alumnos.php");
             
             // Accede a los datos de las columnas específicas
             $apellidoNombres = $campos[0]; // Columna de "Apellido y Nombres"
-            $tipoDNI = $campos[3]; // Columna de "Tipo y Nº DNI"
+            $tipoDNI = $campos[2]; // Columna de "Tipo y Nº DNI"
             $entrada = $tipoDNI;
             $valorNumerico = preg_replace("/[^0-9]/", "", $entrada);
 
