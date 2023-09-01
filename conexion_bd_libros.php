@@ -5,9 +5,9 @@ if (!defined('ACCESO_PERMITIDO')) {
   }
   else {
 $host = "localhost";
-$user = "u922954738_root";
-$password = "MnS$$851";
-$database = "u922954738_biblioteca";
+$user = "root";
+$password = "";
+$database = "biblioteca_virtual";
 
 $conn = new mysqli($host, $user, $password, $database);
 

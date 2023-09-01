@@ -16,10 +16,7 @@ require_once 'controles_admin.php';
 // Conexión con la base de datos
 require_once 'conexion_bd_libros.php';
 
-$host = "localhost";
-$user = "u922954738_root";
-$password = "MnS$$851";
-$database = "u922954738_biblioteca";
+
 
 $conn = new mysqli($host, $user, $password, $database);
 

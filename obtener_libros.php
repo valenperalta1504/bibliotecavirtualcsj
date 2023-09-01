@@ -350,9 +350,9 @@ function obtenerInformacionLibro($isbn) {
 function almacenarDatosEnBD($titulo, $autor, $editorial, $isbn, $anodepublicacion, $descripcion, $categorias, $portada) {
     // Primero, realiza la conexión a la base de datos (reemplaza los valores con los de tu base de datos)
 $host = "localhost";
-$user = "u922954738_root";
-$password = "MnS$$851";
-$database = "u922954738_biblioteca";
+$user = "root";
+$password = "";
+$database = "biblioteca_virtual";
 
     $conn = mysqli_connect($host, $user, $password, $database);
 
